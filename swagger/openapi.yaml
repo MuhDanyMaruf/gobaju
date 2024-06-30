@@ -1,244 +1,196 @@
----
+openapi: 3.0.0
 info:
-  _postman_id: 14715950-9d3a-4530-9449-0e614280547d
-  name: Tugas-besar-pemograman
-  schema: https://schema.getpostman.com/json/collection/v2.1.0/collection.json
-  _exporter_id: '33966215'
-item:
-- name: Login
-  request:
-    auth:
-      type: bearer
-    method: POST
-    header: []
-    body:
-      mode: raw
-      raw: "{\r\n    \"username\" : \"Banban\",\r\n    \"password\" : \"12345\"\r\n}"
-      options:
-        raw:
-          language: json
-    url:
-      raw: http://localhost:8080/login
-      protocol: http
-      host:
-      - localhost
-      port: '8080'
-      path:
-      - login
-  response: []
-- name: Regis
-  request:
-    method: POST
-    header: []
-    body:
-      mode: raw
-      raw: "{\r\n    \"email\" :  \"danymr@gmail.com\",\r\n    \"username\" : \"Budiono\",\r\n
-        \   \"password\" : \"12345\"\r\n}"
-      options:
-        raw:
-          language: json
-    url:
-      raw: http://localhost:8080/regis
-      protocol: http
-      host:
-      - localhost
-      port: '8080'
-      path:
-      - regis
-  response: []
-- name: Get All pakaian
-  protocolProfileBehavior:
-    disableBodyPruning: true
-  request:
-    method: GET
-    header: []
-    body:
-      mode: raw
-      raw: ''
-      options:
-        raw:
-          language: json
-    url:
-      raw: http://localhost:8080/pakaian
-      protocol: http
-      host:
-      - localhost
-      port: '8080'
-      path:
-      - pakaian
-  response: []
-- name: Post Pakaian
-  request:
-    auth:
-      type: bearer
-      bearer:
-      - key: token
-        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJhbmJhbiIsImV4cCI6MTcxOTcyNDc4N30.gh1JFNyhZ8wiQq6sdtWW4HvQ2QV3dTMOXH00OSCFhLc
-        type: string
-    method: POST
-    header: []
-    body:
-      mode: raw
-      raw: "{\r\n    \"namapakaian\": \"Baju Berbulu\",\r\n    \"deskripsi\": \"Bagus
-        untuk musim dingin\",\r\n    \"ukuran\": \"XL\",\r\n    \"stok\": 25,\r\n
-        \   \"hargapakaian\": 500000\r\n}\r\n"
-      options:
-        raw:
-          language: json
-    url:
-      raw: http://localhost:8080/pakaian
-      protocol: http
-      host:
-      - localhost
-      port: '8080'
-      path:
-      - pakaian
-  response: []
-- name: Update Pakaian
-  request:
-    auth:
-      type: bearer
-      bearer:
-      - key: token
-        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJhbmJhbiIsImV4cCI6MTcxOTcyNDc4N30.gh1JFNyhZ8wiQq6sdtWW4HvQ2QV3dTMOXH00OSCFhLc
-        type: string
-    method: PUT
-    header: []
-    body:
-      mode: raw
-      raw: "{\r\n    \"namapakaian\": \"Baju Berbulu Rusa\",\r\n    \"deskripsi\":
-        \"Bagus untuk musim yang sangat dingin\",\r\n    \"ukuran\": \"XXL\",\r\n
-        \   \"stok\": 254,\r\n    \"hargapakaian\": 50100\r\n}\r\n"
-      options:
-        raw:
-          language: json
-    url:
-      raw: http://localhost:8080/pakaian/3
-      protocol: http
-      host:
-      - localhost
-      port: '8080'
-      path:
-      - pakaian
-      - '3'
-  response: []
-- name: Delete Pakaian
-  request:
-    auth:
-      type: bearer
-      bearer:
-      - key: token
-        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJhbmJhbiIsImV4cCI6MTcxOTcyNDc4N30.gh1JFNyhZ8wiQq6sdtWW4HvQ2QV3dTMOXH00OSCFhLc
-        type: string
-    method: DELETE
-    header: []
-    url:
-      raw: http://localhost:8080/pakaian/5
-      protocol: http
-      host:
-      - localhost
-      port: '8080'
-      path:
-      - pakaian
-      - '5'
-  response: []
-- name: Get Pembeli
-  protocolProfileBehavior:
-    disableBodyPruning: true
-  request:
-    method: GET
-    header: []
-    body:
-      mode: raw
-      raw: ''
-      options:
-        raw:
-          language: json
-    url:
-      raw: http://localhost:8080/pembeli
-      protocol: http
-      host:
-      - localhost
-      port: '8080'
-      path:
-      - pembeli
-  response: []
-- name: Post Pembeli
-  request:
-    auth:
-      type: bearer
-      bearer:
-      - key: token
-        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJhbmJhbiIsImV4cCI6MTcxOTcyNDc4N30.gh1JFNyhZ8wiQq6sdtWW4HvQ2QV3dTMOXH00OSCFhLc
-        type: string
-    method: POST
-    header: []
-    body:
-      mode: raw
-      raw: "{\r\n  \"nama\": \"Jane Doe\",\r\n  \"email\": \"jane.doe@example.com\",\r\n
-        \ \"jumlahpembelian\": 50\r\n}\r\n"
-      options:
-        raw:
-          language: json
-    url:
-      raw: http://localhost:8080/pembeli
-      protocol: http
-      host:
-      - localhost
-      port: '8080'
-      path:
-      - pembeli
-  response: []
-- name: Update Pembeli
-  request:
-    auth:
-      type: bearer
-      bearer:
-      - key: token
-        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJhbmJhbiIsImV4cCI6MTcxOTcyNDc4N30.gh1JFNyhZ8wiQq6sdtWW4HvQ2QV3dTMOXH00OSCFhLc
-        type: string
-    method: PUT
-    header: []
-    body:
-      mode: raw
-      raw: "{\r\n  \"nama\": \"jodi didodo\",\r\n  \"email\": \"joko.doe@example.com\",\r\n
-        \ \"jumlahpembelian\": 100\r\n}\r\n"
-      options:
-        raw:
-          language: json
-    url:
-      raw: http://localhost:8080/pembeli/4
-      protocol: http
-      host:
-      - localhost
-      port: '8080'
-      path:
-      - pembeli
-      - '4'
-  response: []
-- name: Delete Pembeli
-  request:
-    auth:
-      type: bearer
-      bearer:
-      - key: token
-        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJhbmJhbiIsImV4cCI6MTcxOTcyNDc4N30.gh1JFNyhZ8wiQq6sdtWW4HvQ2QV3dTMOXH00OSCFhLc
-        type: string
-    method: DELETE
-    header: []
-    body:
-      mode: raw
-      raw: ''
-      options:
-        raw:
-          language: json
-    url:
-      raw: http://localhost:8080/pembeli/4
-      protocol: http
-      host:
-      - localhost
-      port: '8080'
-      path:
-      - pembeli
-      - '4'
-  response: []
+  title: "Tugas Besar Pemograman"
+  version: "1.0.0"
+paths:
+  /login:
+    post:
+      summary: "Login"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+              example:
+                username: "Banban"
+                password: "12345"
+      responses:
+        '200':
+          description: "Successful login"
+  /regis:
+    post:
+      summary: "Register"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                username:
+                  type: string
+                password:
+                  type: string
+              example:
+                email: "danymr@gmail.com"
+                username: "Budiono"
+                password: "12345"
+      responses:
+        '200':
+          description: "Successful registration"
+  /pakaian:
+    get:
+      summary: "Get All Pakaian"
+      responses:
+        '200':
+          description: "Successful operation"
+    post:
+      summary: "Post Pakaian"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                namapakaian:
+                  type: string
+                deskripsi:
+                  type: string
+                ukuran:
+                  type: string
+                stok:
+                  type: integer
+                hargapakaian:
+                  type: integer
+              example:
+                namapakaian: "Baju Berbulu"
+                deskripsi: "Bagus untuk musim dingin"
+                ukuran: "XL"
+                stok: 25
+                hargapakaian: 500000
+      responses:
+        '200':
+          description: "Successful operation"
+  /pakaian/{id}:
+    put:
+      summary: "Update Pakaian"
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                namapakaian:
+                  type: string
+                deskripsi:
+                  type: string
+                ukuran:
+                  type: string
+                stok:
+                  type: integer
+                hargapakaian:
+                  type: integer
+              example:
+                namapakaian: "Baju Berbulu Rusa"
+                deskripsi: "Bagus untuk musim yang sangat dingin"
+                ukuran: "XXL"
+                stok: 254
+                hargapakaian: 50100
+      responses:
+        '200':
+          description: "Successful operation"
+    delete:
+      summary: "Delete Pakaian"
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: "Successful operation"
+  /pembeli:
+    get:
+      summary: "Get Pembeli"
+      responses:
+        '200':
+          description: "Successful operation"
+    post:
+      summary: "Post Pembeli"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama:
+                  type: string
+                email:
+                  type: string
+                jumlahpembelian:
+                  type: integer
+              example:
+                nama: "Jane Doe"
+                email: "jane.doe@example.com"
+                jumlahpembelian: 50
+      responses:
+        '200':
+          description: "Successful operation"
+  /pembeli/{id}:
+    put:
+      summary: "Update Pembeli"
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nama:
+                  type: string
+                email:
+                  type: string
+                jumlahpembelian:
+                  type: integer
+              example:
+                nama: "jodi didodo"
+                email: "joko.doe@example.com"
+                jumlahpembelian: 100
+      responses:
+        '200':
+          description: "Successful operation"
+    delete:
+      summary: "Delete Pembeli"
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: "Successful operation"
