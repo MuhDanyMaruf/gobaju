@@ -35,7 +35,7 @@ func main() {
 	router.HandleFunc("/pembeli/{id}", auth.JWTAuth(pembeli.DeletePembeli)).Methods("DELETE")
 
 	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://127.0.0.1:5500", "http://localhost:8000"},
+		AllowedOrigins:   []string{"http://127.0.0.1:5500", "http://localhost:8000", "https://muhdanymaruf.github.io"},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"Content-Type", "Authorization"},
 		AllowCredentials: true,
